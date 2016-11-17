@@ -1,0 +1,32 @@
+<h1 class="page-header">
+  班级管理
+  <button type="button" class="btn btn-primary" ng-click="showEditor(null);"><span class="glyphicon glyphicon-plus"></span> 新增</button>
+</h1>
+
+<div class="row placeholders">
+  <div class="col-xs-12">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>班级名</th>
+        <th>显示顺序</th>
+        <th class="col-xs-2">操作</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="class in classes">
+        <td class="text-left">{{class.id}}</td>
+        <td class="text-left">{{class.className}}</td>
+        <td class="text-left">{{class.sequence}}</td>
+        <td class="text-left">
+          <button type="button" class="btn btn-primary btn-xs" ng-click="showEditor(class);">编辑</button>
+          <button type="button" class="btn btn-danger btn-xs" ng-click="delete(class);">删除</button>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

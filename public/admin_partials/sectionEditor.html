@@ -1,0 +1,25 @@
+<form ng-submit="submit();">
+    <div class="modal-header">
+        <h3 class="modal-title">节编辑</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="txtTitle">节名称</label>
+            <input class="form-control" id="txtTitle" ng-model="section.sectionName">
+        </div>
+
+        <div class="form-group">
+            <label for="txtTitle">视频文件</label>
+
+            <!--<input type="text" class="form-control"  ng-model="section.videoAddress">-->
+            <input type="file" nv-file-select uploader="uploaderVideo">
+        </div>
+        <div class="form-group">
+            <label for="sequence">显示顺序</label>
+            <input class="form-control" id="sequence" ng-model="section.sequence">
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">保存</button>
+            <button class="btn btn-default" type="button" ng-click="cancel();">取消</button>
+        </div>
+</form>

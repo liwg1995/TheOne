@@ -1,0 +1,53 @@
+<h1 class="page-header">
+  课程管理
+  <button type="button" class="btn btn-primary" ng-click="showEditor(null);"><span class="glyphicon glyphicon-plus"></span> 新增课程</button>
+</h1>
+
+<div class="row placeholders">
+  <div class="col-xs-12">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>名称</th>
+        <th>介绍</th>
+        <th class="text-center">图片</th>
+        <th>显示顺序</th>
+        <th class="col-xs-2">操作</th>
+        <th>其他</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="course in courses" class="max-height-40">
+        <td class="text-left comment">{{course.id}}</td>
+        <td class="text-left comment">{{course.courseName}}</td>
+        <td class="text-left comment max-height-40">{{course.courseIntro}}</td>
+        <td class="">图片</td>
+        <!--<td><img src="{{course.coursePicture}}"></td>-->
+        <td class="text-left">{{course.sequence}}</td>
+        <td class="text-left">
+          <button type="button" class="btn btn-primary btn-xs" ng-click="showEditor(course);">编辑</button>
+          <button type="button" class="btn btn-danger btn-xs" ng-click="delete(course);">删除</button>
+
+        </td>
+        <td class="text-left">
+          <a  class="btn btn-info btn-sm" href="#/chapters/{{course.id}}/{{course.courseName}}">章管理</a>
+          <a  class="btn btn-info btn-sm" href="#/addClasses/{{course.id}}/{{course.courseName}}">添加班级</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <style>
+      .comment{
+
+        max-width:130px ;
+
+      }
+      .max-height-40{
+        height: 40px;
+        overflow: hidden;
+      }
+    </style>
+  </div>
+</div>
+

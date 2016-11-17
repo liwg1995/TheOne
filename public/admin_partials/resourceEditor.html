@@ -1,0 +1,32 @@
+<h1 class="page-header">
+  资源编辑
+  <button type="button" class="btn btn-default" ng-click="goBack();"><span class="glyphicon glyphicon-chevron-left"></span>返回</button>
+  <button type="button" class="btn btn-primary" ng-click="save();"><span class="glyphicon glyphicon-ok"></span> 保存</button>
+</h1>
+
+<div class="row placeholders">
+  <div class="col-xs-12 text-left">
+
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="txtSubtitle">资源名称</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="txtSubtitle" ng-model="resource.resourceName">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for=>资源</label>
+        <div class="col-sm-10">
+        <input type="file" nv-file-select uploader="uploaderResource">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="txtSequence">显示序号</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="txtSequence" ng-model="resource.sequence">
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

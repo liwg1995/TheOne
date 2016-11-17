@@ -1,0 +1,36 @@
+<h1 class="page-header">
+    作业评判
+    <button type="button" class="btn btn-default" ng-click="goBack();"><span
+            class="glyphicon glyphicon-chevron-left"></span>返回
+    </button>
+
+</h1>
+<h4>本课名称:{{courseName}}</h4>
+<hr>
+<div class="row placeholders">
+    <div class="col-xs-12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>作业名称</th>
+                <th class="col-xs-2">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="homework in homeworks">
+                <td class="text-left">{{homework.id}}</td>
+                <td class="text-left">{{homework.homeworkName}}</td>
+                <td class="text-left">
+                    <a class="btn btn-info btn-sm" href="#/showJudgePage/{{homework.id}}">评判</a>
+                    <a type="button" class="btn btn-info btn-sm"
+                       href="api/downloadFile/getHomeworkPack/{{token}}/{{homework.id}}">打包下载</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+    </script>
+</div>
+

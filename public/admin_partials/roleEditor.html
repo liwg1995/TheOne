@@ -1,0 +1,15 @@
+<form ng-submit="submit();">
+  <div class="modal-header">
+    <h3 class="modal-title">角色编辑</h3>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="txtTitle">角色名称</label>
+      <input class="form-control" id="txtTitle" ng-model="role.roleName">
+    </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="submit">保存</button>
+    <button class="btn btn-default" type="button" ng-click="cancel();">取消</button>
+  </div>
+</form>

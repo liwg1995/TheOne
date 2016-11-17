@@ -1,0 +1,51 @@
+<h1 class="page-header">
+    教师信息表上传(Excel电子表格)
+    <button type="button" class="btn btn-default" ng-click="goBack();"><span class="glyphicon glyphicon-chevron-left"></span>返回</button>
+
+</h1>
+
+<span>注意:上传前请确保电子表格只有一张工作表并且表格只能有2项username(教师号),name(教师姓名),否则则会出现上传失败的情况</span>
+<hr/>
+<div class="row placeholders">
+    <div class="col-xs-12 text-center">
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" >请选择老师的学院</label>
+                <div class="col-sm-10">
+
+                    <select class="form-control" ng-change="getDepartments(x)" ng-model="x">
+                        <option ng-repeat="institute in institutes" value="{{institute.id}}">{{institute.instituteName}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" >请选择老师的系</label>
+                <div class="col-sm-10">
+
+                    <select class="form-control" ng-change=getMajors(y) ng-model="y">
+                        <option ng-repeat="department in departments" value="{{department.id}}" ng-selected="">{{department.departmentName}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" >请选择老师的专业</label>
+                <div class="col-sm-10">
+
+                    <select class="form-control" ng-change=getSelectedMajor(z) ng-model="z">
+                        <option ng-repeat="major in majors" ng-selected="" value="{{major.id}}">{{major.majorName}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for=>教师表格文件</label>
+                <div class="col-sm-10">
+                    <input type="file" nv-file-select uploader="uploader">
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" ng-click="save();">提交</button>
+        </form>
+
+    </div>
+</div>

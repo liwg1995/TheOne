@@ -1,0 +1,39 @@
+<h1 class="page-header" xmlns="http://www.w3.org/1999/html">
+    设置权限
+    <button type="button" class="btn btn-default" ng-click="goBack()"><span class="glyphicon glyphicon-chevron-left"></span>返回</button>
+</h1>
+
+<div class="row placeholders">
+    <div class="col-xs-12 text-center">
+
+            <form>
+                <fieldset>
+                    <legend>请为此角色(<b> {{roleName}} </b>)设置权限</legend>
+                    <table class="table table-striped text-center">
+                        <thead >
+                        <tr >
+                            <th class="text-center">选中</th>
+                            <th class="text-center">权限名</th>
+                        </tr>
+                        <tr><td><input type="checkbox" ng-click="checkAll()" ng-model="isCheckAll"> 全选</td></tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="permission in permissions">
+                                <td><input type="checkbox"  ng-model="permission.selected"></td>
+                                <td>{{permission.permissionMean}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!--<div ng-repeat="permission in permissions">-->
+                        <!--<label class="checkbox font-16">-->
+                            <!--<input type="checkbox"  ng-model="permission.selected"> {{permission.permissionName}}-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <button type="submit" class="btn btn-info" ng-click="submit()">提交</button>
+                </fieldset>
+            </form>
+
+    </div>
+</div>
+

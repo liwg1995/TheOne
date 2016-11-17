@@ -1,0 +1,22 @@
+<h1 class="page-header">
+  页面编辑
+  <button type="button" class="btn btn-default" ng-click="goBack();"><span class="glyphicon glyphicon-chevron-left"></span>返回</button>
+</h1>
+
+<div class="row placeholders">
+  <div class="col-xs-12 text-center">
+
+    <form>
+      <fieldset>
+        <legend>请为此课程(<b> {{courseName}} </b>)设置班级</legend>
+        <div ng-repeat="class in classes">
+          <label class="checkbox font-16">
+            <input type="checkbox"  ng-model="class.selected"> {{class.className}}
+          </label>
+        </div>
+        <button type="submit" class="btn btn-info" ng-click="submit()">提交</button>
+      </fieldset>
+    </form>
+
+  </div>
+</div>

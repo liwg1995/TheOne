@@ -1,0 +1,27 @@
+<h1 class="page-header">
+  作业评判
+</h1>
+
+<div class="row placeholders">
+  <div class="col-xs-12">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>课程名称</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="course in courses">
+        <td class="text-left">{{course.id}}</td>
+        <td class="text-left">{{course.courseName}}</td>
+        <td class="text-left">
+          <a  class="btn btn-info btn-sm" href="#/showHomework/{{course.id}}/{{course.courseName}}">评判</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

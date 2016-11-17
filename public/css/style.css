@@ -1,0 +1,392 @@
+body{
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+}
+.carousel a{
+    margin-top: 150px;
+    width: 0px;
+    font-size: 100px;
+    display: inline-block;
+    font-weight: 100;
+    position: absolute;
+
+}
+
+#myCarousel .item img{
+    width: 100%;
+    height: 600px;
+}
+.features{
+    margin-top: 30px;
+}
+
+
+
+
+#logo{
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    padding: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#logo img{
+    width: 200px;
+    height: 50px;
+}
+.navbar-border{
+    border-radius: 0;
+    border: 0px;
+}
+.navbar-backgrnd{
+    background-color: black;
+}
+
+.navbar-padding-margin{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#btn-xs{
+
+
+    border: 1px #FFFFFF solid;
+
+}
+#btn-xs span{
+    background-color: #FFFFFF;
+}
+.navbar li>a:hover{
+    background: transparent;
+    color: #FFFFFF;
+}
+.navbar li>a{
+    color: #ebebeb;
+}
+#login-register{
+    width: 30%;
+    border: none;
+    position: fixed;
+
+    z-index: 100001;
+    top: 25%;
+    left: 36%;
+
+    background-color: #fff;
+
+    border-radius: 5px;
+}
+.tab-content{
+    margin-top: 30px;
+}
+#login-register li>a{
+    color: #777777;
+}
+#close-loginPage{
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-size: 20px;
+    background-position: center;
+    right: 0px;
+}
+#close-loginPage:hover{
+    transform:rotate(90deg);
+    transition-duration:0.5s;
+} .features h3{
+      font-family: “Arial”,”Microsoft YaHei”,”黑体”,”宋体”,sans-serif;
+      font-weight: 100;
+      color: #BBBBBB;
+  }
+.features-xs{
+    margin-top: 30px;
+}
+.features-xs img{
+    width: 80px;
+}
+.features-xs h4{
+    font-family: “Arial”,”Microsoft YaHei”,”黑体”,”宋体”,sans-serif;
+    font-weight: 300;
+    color: #BBBBBB;
+}
+.features-info{
+    margin-top: 80px;
+
+}
+.features-info .container-fluid{
+    padding: 0px  ;
+
+}
+
+.features-info-left{
+
+    background-repeat: no-repeat;
+    background-size: 250px 200px;
+    height: 300px;
+    background-position: left;
+
+
+}
+.features-info-left h2{
+
+    color: #aaaaaa;
+
+
+}
+.features-info-left p{
+
+    color: #aaaaaa;
+    font-size: 16px;
+
+
+}
+.features-info-right{
+    color: #aaaaaa;
+
+}
+.features-info-right p{
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+.features-info-right{
+    background-repeat: no-repeat;
+    background-size: 250px 200px;
+    height: 300px;
+    background-position: right;
+
+}
+.nav-xs .navbar{
+    height: 50px;
+}
+.under-nav {
+    height: 50px;
+}
+.under-nav img{
+
+    width: 30px;
+}
+.under-nav-item{
+    background-repeat: no-repeat;
+    height: 60px;
+    background-size: 30px;
+    background-position:  top center;
+}
+.under-nav-item p{
+    line-height: 80px;
+    color: #BBBBBB;
+}
+footer{
+    line-height: 50px;
+    background-color: #000000;
+    height: 50px;
+    color: #FFFFFF;
+}
+/*
+    Public Stylesheet of Software Course Online
+    2016.01.22 Created By ShenHongtai
+*/
+
+/*
+    2016.02.17 Edited By ShenHongtai
+    Details:
+    - 释放了container类的宽度限制
+    - 将myinfo栏和mycourse栏设置为自适应宽度，并设置了最小宽度
+    - 新增了course-block类的最小宽度
+*/
+
+/*
+    2016.02.19 Edited By ShenHongtai
+    Details:
+    - 取消了myinfo栏和mycourse栏的border属性和box-shadow属性
+*/
+
+* {
+    font-family: 微软雅黑, 宋体;
+}
+.page-header {
+    text-align: center;
+    height: 80px;
+    margin: 0 auto;
+}
+.page-header img {
+    height: 80px;
+    width: 990px;
+}
+.jumbotron {
+    background-image: url(../image/loginbg.jpg);
+    height: 475px;
+    min-height: 475px;
+    min-width: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.jumbotron #formindex {
+    width: 330px;
+    height: 230px;
+    position: absolute;
+    top: 5px;
+    right: 70px;
+}
+.jumbotron #formindex .textbox {
+    margin: 24px 24px 16px 24px;
+    width: 290px;
+}
+.jumbotron #formindex label {
+    width: 80px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.jumbotron #formindex .logbutton {
+    margin: 10px 16px;
+    padding: 5px 30px;
+}
+.container {
+    position: relative;
+}
+.nav {
+    border: none;
+}
+#user-control {
+    padding: 8px 15px 0px 0px;
+}
+.nav .container-fluid, .nav .collapse {
+    padding-right: 0;
+}
+#myinfo {
+    float: left;
+    width: 26%;
+    min-width: 255px;
+    border: none;
+    box-shadow: none;
+}
+#mycourse {
+    float: right;
+    width: 72%;
+    min-width: 255px;
+    min-height: 390px;
+    border: none;
+    box-shadow: none;
+}
+.course-block {
+    min-width: 240px;
+    max-height: 240px;
+
+}
+.course-block img {
+    width: 177px;
+    height: 100px;
+}
+.course-block a, .path-block a {
+    text-decoration: none;
+}
+.course-block .caption, .path-block .caption {
+    padding: 0;
+
+}
+.caption{
+    max-height: 120px;
+    overflow: auto;
+}
+.path-block div {
+    margin: 8px;
+}
+.courseinfo {
+    width: 705px;
+    min-height: 100px;
+}
+.courseinfo th, .courseinfo td {
+    text-align: center;
+    vertical-align: middle !important;
+}
+.worklist th, .worklist td, .worklist caption {
+    text-align: center;
+    vertical-align: middle !important;
+}
+.worklist textarea {
+    width: 320px;
+    height: 60px;
+    resize: none;
+}
+#workchecker label, .class-view label {
+    padding-right: 12px;
+}
+#coursevideo video, #coursevideo source {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    width: 280px;
+    float: right;
+}
+.para {
+    text-indent: 2em;
+    line-height: 1.5em;
+}
+pre.para {
+    text-indent: 0;
+    font-family: 微软雅黑, 宋体;
+    font-size: 14px;
+    padding: 1em 2em;
+    border: none;
+}
+#resetpw form {
+    text-align: center;
+}
+#resetpw label {
+    padding: 5px;
+}
+.courseinfo-editor textarea {
+    height: 120px;
+    margin-bottom: 15px;
+    resize: none;
+}
+input[type="file"] {
+    display: inline;
+}
+#course-control a {
+    margin: 5px;
+}
+.footer a {
+    color: #000;
+}
+.footer {
+    clear: both;
+    text-align: center;
+}
+.min-height-800{
+    min-height: 800px;
+}
+.margin-top-10{
+    margin-top: 10px;
+}
+.margin-top-20{
+    margin-top: 20px;
+}
+
+.margin-bottom-20{
+    margin-top: 20px;
+}
+.font-14{
+    font-size: 14px;
+}
+.margin-left-20{
+    margin-left: 20px;
+}
+.margin-left-100{
+    margin-left: 100px;
+}
+.min-height-300{
+    min-height: 300px;
+}
+.mouseover-pointer{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+.mouseover-pointer a{
+    color: black;
+    text-decoration: none;
+}

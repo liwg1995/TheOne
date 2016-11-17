@@ -1,0 +1,35 @@
+<h1 class="page-header">
+    节管理
+    <button type="button" class="btn btn-default" ng-click="goBack();"><span class="glyphicon glyphicon-chevron-left"></span>返回</button>
+    <button type="button" class="btn btn-primary" ng-click="showEditor(null);"><span class="glyphicon glyphicon-plus"></span> 新增</button>
+
+</h1>
+<div class="row placeholders">
+    <div class="col-xs-12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>名称</th>
+                <th>顺序</th>
+                <th class="col-xs-2">操作</th>
+                <th>其他</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="section in sections">
+                <td class="text-left">{{section.id}}</td>
+                <td class="text-left">{{section.sectionName}}</td>
+                <td class="text-left">显示顺序</td>
+                <td class="text-left">
+                    <button type="button" class="btn btn-primary btn-xs" ng-click="showEditor(section);">编辑</button>
+                    <button type="button" class="btn btn-danger btn-xs" ng-click="delete(section);">删除</button>
+                </td>
+                <td class="text-left"><a class="btn btn-info btn-sm" href="#/resources/{{section.id}}">资料管理</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

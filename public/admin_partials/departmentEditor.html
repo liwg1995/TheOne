@@ -1,0 +1,19 @@
+<form ng-submit="submit();">
+  <div class="modal-header">
+    <h3 class="modal-title">系编辑</h3>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="courseName">系名称</label>
+      <input class="form-control" id="courseName" ng-model="department.departmentName">
+    </div>
+    <div class="form-group">
+      <label for="txtSequence">显示顺序</label>
+      <input class="form-control" id="txtSequence" ng-model="department.sequence">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="submit">保存</button>
+    <button class="btn btn-default" type="button" ng-click="cancel();">取消</button>
+  </div>
+</form>

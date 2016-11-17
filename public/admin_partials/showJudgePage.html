@@ -1,0 +1,48 @@
+<h1 class="page-header">
+    作业评判
+    <button type="button" class="btn btn-default" ng-click="goBack();"><span class="glyphicon glyphicon-chevron-left"></span>返回</button>
+    <span class="font-18 text-danger">满分为100分</span>
+</h1>
+
+<div class="row placeholders">
+    <div class="col-xs-12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>姓名</th>
+                <th>班级</th>
+                <th>得分</th>
+                <th>评语</th>
+                <th>是否提交</th>
+                <th class="col-xs-2">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="homeworkAndStudent in homeworkAndStudents">
+                <td class="text-left">{{homeworkAndStudent.studentName}}</td>
+                <td class="text-left">{{homeworkAndStudent.className}}</td>
+                <td class="text-left">{{homeworkAndStudent.score}}</td>
+                <td class="text-left comment">{{homeworkAndStudent.comment}}</td>
+                <td class="text-left">
+                    <button type="button" class="btn btn-success btn-xs " ng-if="homeworkAndStudent.isSubmit" >已提交</button>
+                    <button type="button" class="btn btn-danger btn-xs" ng-if="!homeworkAndStudent.isSubmit" >未提交</button>
+
+                </td>
+                <td class="text-left">
+                    <button type="button" class="btn btn-info btn-sm" ng-click="showEditor(homeworkAndStudent);" ng-if="homeworkAndStudent.isSubmit" >编辑</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <style>
+            .comment{
+
+                max-width:130px ;
+            }
+            .font-18{
+                font-size: 18px;
+            }
+        </style>
+    </div>
+</div>
+

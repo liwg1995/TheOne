@@ -1,0 +1,36 @@
+<h1 class="page-header">
+    章管理
+    <button type="button" class="btn btn-default" ng-click="goBack();"><span class="glyphicon glyphicon-chevron-left"></span>返回</button>
+    <button type="button" class="btn btn-primary" ng-click="showEditor(null);"><span class="glyphicon glyphicon-plus"></span> 新增</button>
+
+</h1>
+<h4>本课名称:{{courseName}}</h4><hr>
+<div class="row placeholders">
+    <div class="col-xs-12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>名称</th>
+                <th>顺序</th>
+                <th class="col-xs-2">操作</th>
+                <th>其他</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="chapter in chapters">
+                <td class="text-left">{{chapter.id}}</td>
+                <td class="text-left">{{chapter.chapterName}}</td>
+                <td class="text-left">{{chapter.sequence}}</td>
+                <td class="text-left">
+                    <button type="button" class="btn btn-primary btn-xs" ng-click="showEditor(chapter);">编辑</button>
+                    <button type="button" class="btn btn-danger btn-xs" ng-click="delete(chapter);">删除</button>
+                </td>
+                <td class="text-left"> <a class="btn btn-info btn-sm" href="#/sections/{{chapter.id}}">节管理</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

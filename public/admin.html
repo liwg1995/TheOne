@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="TheyOneAdmin" ng-controller="RootController as root">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{root.projectName}}</title>
+
+  <!--[if IE]>
+  <script>
+    window.location.href = 'noie.html';
+  </script>
+  <![endif]-->
+
+  <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+              aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">{{root.projectName}}</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-if="root.isLogin"><a href="">Admin</a></li>
+        <li ng-if="root.isLogin"><a href="#">修改密码</a></li>
+        <li ng-if="root.isLogin"><a href="#/logout">注销</a></li>
+        <li ng-if="!root.isLogin" class="active"><a href="#/login">登陆</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row" ng-if="!root.isLogin" ng-view></div>
+  <div class="row" ng-if="root.isLogin">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        <li ng-class="{active: root.moduleName == 'PersonalPage'}"><a href="#/personalPage">个人主页</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li ng-class="{active: root.moduleName == 'User'}"><a href="#/users">用户管理</a></li>
+        <li ng-class="{active: root.moduleName == 'Role'}"><a href="#/roles">角色管理</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li ng-class="{active: root.moduleName == 'Institute'}"><a href="#/institutes">学院管理</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li ng-class="{active: root.moduleName == 'Course'}"><a href="#/courses">课程管理</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li ng-class="{active: root.moduleName == 'UploadHomework'}"><a href="#/uploadHomework">作业上传</a></li>
+        <li ng-class="{active: root.moduleName == 'JudgeHomework'}"><a href="#/judgeHomework">评判作业</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li ng-class="{active: root.moduleName == 'UploadAdministrator'}"><a href="#/uploadAdministrators">老师信息上传</a></li>
+        <li ng-class="{active: root.moduleName == 'UploadStudent'}"><a href="#/uploadStudents">学生信息上传</a></li>
+
+      </ul>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view>
+
+    </div>
+  </div>
+</div>
+
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/ace/1.2.2/ace.js"></script>
+<script src="//cdn.bootcss.com/angular.js/1.5.0-beta.1/angular.js"></script>
+<script src="//cdn.bootcss.com/angular.js/1.5.0-beta.1/angular-route.js"></script>
+<script src="//cdn.bootcss.com/angular.js/1.5.0-beta.1/angular-cookies.js"></script>
+<script src="//cdn.bootcss.com/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"></script>
+<script src="//cdn.bootcss.com/angular-file-upload/1.1.6/angular-file-upload.min.js"></script>
+<script src="//cdn.bootcss.com/holder/2.9.0/holder.min.js"></script>
+<script src="//cdn.bootcss.com/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

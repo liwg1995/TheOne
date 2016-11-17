@@ -1,0 +1,13 @@
+<link href="css/login.css" rel="stylesheet">
+<div class="container">
+  <div class="col-xs-12 col-md-4 col-md-offset-4">
+    <form ng-submit="login();">
+      <h2>登陆</h2>
+      <input id="inputAccount" class="form-control input-lg" placeholder="账号" required autofocus ng-model="loginPostData.username">
+      <input type="password" id="inputPassword" class="form-control input-lg" placeholder="密码" required ng-model="loginPostData.password">
+      <br>
+      <button class="btn btn-primary btn-block" type="submit">登陆</button>
+    </form>
+  </div>
+
+</div> <!-- /container -->
